@@ -1,17 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-import './todo-item.styles.scss';
+import { Card } from 'react-bootstrap'
 
-const TodoItem = ({title,content}) => (
-    
-   <div className='task-container' >
-       <div className='task-title'>
-            <h4>{title}</h4>
-       </div>
-       <div className='task-content'>
-            <p>{content}</p>
-       </div>
-   </div>
+const TodoItem = ({title, content}) => (
+    <Card style={{ width: '18rem'}}>
+        <Card.Header>{title}</Card.Header>
+        <Card.Body>
+            {content}
+        </Card.Body>
+    </Card>
 )
 
 export default TodoItem;
